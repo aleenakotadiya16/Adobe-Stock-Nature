@@ -19,7 +19,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("ingestion started")
         try:
-            df= pd.read_csv(r"C:\Users\Aleena\Adobe stock pize\Data\Adobe.csv")
+            df= pd.read_csv(r"C:\Users\Aleena\Adobe stock pize\Data\data.csv")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.Raw_data_path,index=False,header=True)
             logging.info("Raw data saved")
